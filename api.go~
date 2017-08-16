@@ -1,0 +1,10 @@
+package main
+
+import (
+	"github.com/codegangsta/martini"
+	"github.com/codegangsta/martini-contrib/render"
+)
+func GetApi() *martini.ClassicMartini {
+	api := martini.Classic()
+	return api
+}

@@ -1,0 +1,5 @@
+package main
+func GetApi(){}
+func main() {
+	GetApi()
+}
