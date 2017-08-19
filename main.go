@@ -9,9 +9,10 @@ import (
 func writeNetworkDevicesList(w http.ResponseWriter, r *http.Request) {
 	interfaces, err := net.Interfaces()
 	if err != nil {
-		fmt.Fprintf(w, err.Error())
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "List of network devices:\n\n")
 	for i := 0; i < len(interfaces); i++ {
 		fmt.Fprintf(w, "Name: %v; ", interfaces[i].Name)
