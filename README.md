@@ -3,7 +3,7 @@
 2. Загрузите контейнер из файла docker_container.tar, введя:  
 sudo docker load < ./docker_container.tar  
 3. Запустите контейнер, введя:  
-docker run -p3000:3000 network_devices_list_service  
+sudo docker run -p3000:3000 network_devices_list_service  
 4. Приложение запущено, теперь можно перейти в браузере по адресу localhost:3000 и посмотреть список сетевых устройств  
 
 
